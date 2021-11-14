@@ -1,0 +1,158 @@
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <body>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+        <center><h1>Profil Saya</h1></center>
+        <p align="center">
+            Inilah foto saya
+        </p>
+        </div>
+            
+        <div class="col">
+            <div class="container pt-2"> 
+     <div class="toast" data-autohide="false">
+        <div class="toast-header" style="background-color: beige;">
+          <strong class="mr-auto text-primary">Profilku</strong>
+          <small class="text-muted">now</small>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body" style="background-color: burlywood;">
+          Selamat datang di profile diriku
+        </div>
+        </div>
+     </div>
+      </div>
+    </div>
+    
+    <script>
+    $(document).ready(function(){
+      $('.toast').toast('show');
+    });
+    </script>
+     <center><img src="foto/fotodiriku.jpg" width="200" height="300" ></center>
+     <p align="justify">
+         Halo semuanya, perkenalkan nama saya Josha Adrista Harianto bisa dipanggil Josha.
+         Saya lahir di Jakarta pada tangga 30 November tahun 2002. Saya merupakan 
+         anak kedua dari dua bersaudara. Ayah saya merupakan seorang karyawan swasta dan
+         ibu saya merupakan ibu rumah tangga. Kakak saya merupakan mahasiswi kedokteran gigi 
+         di Universitas Airlangga. Mungkin ini adalah perkenalan singkat diri saya 
+         serta keluarga kecil saya. 
+         </p>
+         <hr>
+     <h3>Pendidikan</h3>
+ 
+     <table style="widht: 50%">
+         <tr>
+             <th>Periode</th>
+             <th>Nama Sekolah</th>
+             <th>Jenjang</th>
+         </tr>
+         <tr>
+             <td>2008-2014</td>
+             <td>Strada Bhakti Utama</td>
+             <td>Sekolah Dasar</td>
+         </tr>
+         <tr>
+             <td>2014-2017</td>
+             <td>Strada Bhakti Utama</td>
+             <td>Sekolah Menengah Pertama</td>
+         </tr>
+         <tr>
+             <td>2017-2020</td>
+             <td>SMAN 47 Jakarta</td>
+             <td>Sekolah Menengah Atas</td>
+         </tr>
+         <tr>
+             <td>2020-2014</td>
+             <td>Strada Bhakti Utama</td>
+             <td>Sekolah Dasar</td>
+         </tr>
+         <tr>
+             <td>2020-2024 <mark>(AMIN)</mark></td>
+             <td>Institut Teknologi Sepuluh Nopember</td>
+             <td>Universitas</td>
+         </tr>
+     
+     </table>
+     <hr>
+     
+     <p>
+        
+         <ul>
+             <b>Hobi Saya: </b>
+             <li>Bernyanyi</li>
+             <li>Bermain Game</li>
+             <li>Bermain serta menonton basket</li>
+             <li>Menonton bola</li>
+         </ul>
+         <br>
+         <hr>
+         <ol>
+             <b>Kelebihan:</b>
+             <li>Disiplin</li>
+             <li>Bertanggung Jawab</li>
+             <li>Tepat Waktu</li>
+         </ol>
+ 
+ 
+     </p>
+     <hr>
+     <h2>Minuman atau makanan kesukaan</h2>
+ 
+     <dl>
+         <dt>Susu</dt>
+         <dd>* Susu rasa cokelat</dd>
+         <dd>* Susu rasa Vanilla</dd>
+         <dt>Kopi</dt>
+         <dd>* Kopi susu </dd>
+         <dd><i>* Cappucino</i></dd>
+         <dt>Nasi Goreng</dt>
+         <dd>* Nasi goreng ayam</dd>
+         <dd>* Nasi goreng <i>seafood</i></dd>
+         <dt>Sate</dt>
+         <dd>* Sate Ayam</dd>
+         <dd>* Sate Kambing</dd>
+ 
+ 
+     </dl>
+     <div class="container mt-5 mb-5">
+         <a href="https://www.linkedin.com/in/josha-adrista-harianto-b1b434192/" class="btn btn-primary" id="myDialog">Visit my Linkedin</a>
+     </div>
+     <div class="toast mt-3">
+        <div class="toast-header">
+          Toast Header
+        </div>
+        <div class="toast-body">
+          Some text inside the toast body
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    $(document).ready(function(){
+      $("#myDialog").click(function(){
+        $('.toast').toast('show');
+      });
+    
+      $('.toast').on('show.bs.toast', function(){
+        alert('Arahkan ke profile Linkedin saya');
+      });
+    });
+    </script>
+   
+
+</body>
+</html>
