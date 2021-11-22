@@ -58,7 +58,7 @@ class PendapatanController extends Controller
         // alihkan halaman ke halaman pendapatan
         return redirect('/pendapatan');
     }
-    // method untuk hapus data pegawai
+    // method untuk hapus data pendapatan
     public function hapus($id)
     {
         // menghapus data pendapatan berdasarkan id yang dipilih
