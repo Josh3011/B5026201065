@@ -4,12 +4,12 @@
 
 @section('isikonten')
 
-@section('judulhalaman', 'ABSEN PEGAWAI')
+@section('judulhalaman', 'TAMBAH ABSEN')
 
-	<h2><a href="https://www.malasngoding.com"></a></h2>
+
 	<h3>Absen Pegawai</h3>
 
-	<a href="/absen"> Kembali</a>
+	<a href="/absen" class="btn btn-primary"> Kembali</a>
 
 	<br/>
 	<br/>

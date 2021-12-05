@@ -74,4 +74,3 @@ public function hapus($id)
 	return redirect('/absen');
 }
 }
-

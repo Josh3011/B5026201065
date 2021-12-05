@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Josha Adrista Harianto (5026201065)</title>
-</head>
-<body>
+@extends('layout.ceria')
 
+@section('title', 'DATA PENDAPATAN')
 
+@section('isikonten')
 	<h3>Data pendapatan</h3>
 
-	<a href="/pendapatan"> Kembali</a>
+	<a href="/pendapatan" class="btn btn-primary"> Kembali</a>
 
 	<br/>
 	<br/>
@@ -22,6 +19,4 @@
         tunjangan <input type="number" name="tunjangan" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
-
-</body>
-</html>
+@endsection

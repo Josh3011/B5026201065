@@ -1,77 +1,49 @@
-<?php
+@extends('layout.ceria')
 
-namespace App\Http\Controllers;
+@section('title', 'ABSEN PEGAWAI')
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+@section('isikonten')
 
-class AbsenController extends Controller
-{
-    public function index()
-    {
-    	// mengambil data dari table pegawai
-    	$absen = DB::table('absen')->get();
+@section('judulhalaman', 'EDIT ABSEN')
 
-    	// mengirim data pegawai ke view index
-    	return view('absen.index',['absen' => $absen]);
+<h3>Edit Absen</h3>
+<a href="/absen" class="btn btn-primary"> Kembali</a>
 
-    }
-    // method untuk menampilkan view form tambah pegawai
-public function tambah()
-{
 
-	// memanggil view tambah
-    $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+<h1>{{ $judul }}</h1>
+	@foreach($absen as $p)
+	<form action="/absen/update" method="post">
+		{{ csrf_field() }}
+		<input type="hidden" name="id" value="{{ $p->ID }}"> <br/>
+        Pegawai <select id="IDPegawai" name="IDPegawai" required="required">
+            @foreach($pegawai as $peg)
+                <option value="{{ $peg->pegawai_id }}" @if ($peg->pegawai_id === $p->IDPegawai) selected="selected" @endif> {{ $peg->pegawai_nama }}</option>
+            @endforeach
+        </select><br>
+        <div class="form-group">
+            <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
+                <div class='col-sm-4 input-group date ' id='dtpickerdemo'>
+                    <input type='text' class="form-control" name="tanggal" value="{{ $p->Tanggal }}"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#dtpickerdemo').datetimepicker({format : "YYYY-MM-DD hh:mm", "defaultDate":new Date() });
+                });
+            </script>
+            <br>
+		Status
+        <input type="radio" id="hadir" name="status" value="H" @if ($p->Status === "H") checked="checked" @endif>
+        <label for="hadir">HADIR</label>
+        <input type="radio" id="tidak" name="status" value="T" @if ($p->Status === "T") checked="checked" @endif>
+        <label for="tidak">TIDAK HADIR</label><br>
 
-	return view('absen.tambah', ['pegawai' => $pegawai]);
+		<input type="submit" value="Simpan Data">
+	</form>
+	@endforeach
 
-}
-// method untuk insert data ke table pegawai
-public function store(Request $request)
-    {
-        //DB::table()->insert();
-        // insert data ke table pegawai
-        DB::table('absen')->insert([
-            'IDPegawai' => $request->IDPegawai,
-            'Tanggal' => $request->tanggal,
-            'Status' => $request->status
-        ]);
-        // alihkan halaman ke halaman pegawai
-        return redirect('/absen');
-    }
-    // method untuk edit data pegawai
-public function edit($id)
-{
-	// mengambil data pegawai berdasarkan id yang dipilih
-	$absen = DB::table('absen')->where('ID',$id)->get();
 
-    $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
-
-    $judul = "Haloo Apa Kabar" ;
-
-	// passing data pegawai yang didapat ke view edit.blade.php
-	return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai,'judul' => $judul]);
-}
-// update data pegawai
-public function update(Request $request)
-{
-	// update data pegawai
-	DB::table('absen')->where('ID',$request->id)->update([
-            'IDPegawai' => $request->IDPegawai,
-            'Tanggal' => $request->tanggal,
-            'Status' => $request->status
-	]);
-	// alihkan halaman ke halaman pegawai
-	return redirect('/absen');
-}
-// method untuk hapus data pegawai
-public function hapus($id)
-{
-	// menghapus data pegawai berdasarkan id yang dipilih
-	DB::table('absen')->where('ID',$id)->delete();
-
-	// alihkan halaman ke halaman pegawai
-	return redirect('/absen');
-}
-}
-
+    @endsection

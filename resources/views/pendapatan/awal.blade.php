@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Josha Adrista Harianto (5026201065)</title>
-</head>
-<body>
+@extends('layout.ceria')
 
-	<h2>Josha Adrista Harianto (5026201065)</h2>
-	<h3>Data Pendapatan</h3>
+@section('title', 'DATA PENDAPATAN')
 
-	<a href="/pendapatan/tambah"> + Tambah tabel pendapatan</a>
+@section('isikonten')
+
+	<h3>DATA PENDAPATAN</h3>
+
+	<a href="/pendapatan/tambah" class="btn btn-primary"> + Tambah tabel pendapatan</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table class="table table-success table-striped">
 		<tr>
 			<th>idpegawai</th>
 			<th>bulan</th>
@@ -30,14 +28,11 @@
 			<td>{{ $p->pendapatan_gaji }}</td>
             <td>{{ $p->pendapatan_tunjangan }}</td>
 			<td>
-				<a href="/pendapatan/edit/{{ $p->pendapatan_id }}">Edit</a>
+				<a href="/pendapatan/edit/{{ $p->pendapatan_id }}" class="btn btn-warning" >Edit</a>
 				|
-				<a href="/pendapatan/hapus/{{ $p->pendapatan_id }}">Hapus</a>
+				<a href="/pendapatan/hapus/{{ $p->pendapatan_id }}" class="btn btn-danger" >Hapus</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
-
-
-</body>
-</html>
+@endsection
