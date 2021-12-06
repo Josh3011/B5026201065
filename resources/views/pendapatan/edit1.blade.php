@@ -19,7 +19,7 @@
         tahun <input type="number" required="required" name="tahun" value="{{ $p->pendapatan_tahun }}"> <br/>
         gaji <input type="number" required="required" name="gaji" value="{{ $p->pendapatan_gaji }}"> <br/>
         tunjangan <input type="number" required="required" name="tunjangan" value="{{ $p->pendapatan_tunjangan }}"> <br/>
-		<input type="submit" value="Simpan Data">
+		<input type="submit" class='btn btn-success' value="Simpan Data">
 	</form>
 	@endforeach
 @endsection

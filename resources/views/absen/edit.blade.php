@@ -41,7 +41,7 @@
         <input type="radio" id="tidak" name="status" value="T" @if ($p->Status === "T") checked="checked" @endif>
         <label for="tidak">TIDAK HADIR</label><br>
 
-		<input type="submit" value="Simpan Data">
+		<input type="submit" class='btn btn-success' value="Simpan Data">
 	</form>
 	@endforeach
 

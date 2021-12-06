@@ -41,7 +41,7 @@
   <label for="hadir">HADIR</label><br>
   <input type="radio" id="tidak" name="status" value="T" checked="checked">
   <label for="tidak">TIDAK HADIR</label><br>
-		<input type="submit" value="Simpan Data">
+		<input type="submit" class='btn btn-success' value="Simpan Data">
 	</form>
 
 @endsection
