@@ -30,7 +30,7 @@
 </style>
 <body>
 <div class="header">
-    <center><img src="fotocsshtml/fotodiriku.jpg" width="200px" height="250px">
+    <center><img src="{{ asset('fotocsshtml/fotodiriku.jpg')}}" width="200px" height="250px">
             <h4> 5026201065/ Josha Adrista Harianto </h4>
     </center>
 
@@ -50,11 +50,13 @@
     @show
     </div>
 </div>
+<footer>
 <div class="footer">
     <center>
     <h5> Dibuat oleh Josha Adrista Harianto-5026201065 </h5>
     <h5> Versi 1.0 </h5>
     </center>
+</footer>
 </div>
 </body>
 </html>
