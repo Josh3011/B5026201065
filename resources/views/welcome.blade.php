@@ -94,6 +94,7 @@
                     <a href="praktikum2">Praktikum 2</a>
                     <a href="ets">ETS</a>
                     <a href="fibo">Tugas PHP</a>
+                    <a href=/pegawai>Database</a>
                 </div>
             </div>
         </div>
