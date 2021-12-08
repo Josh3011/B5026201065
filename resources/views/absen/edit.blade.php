@@ -36,9 +36,9 @@
             </script>
             <br>
 		Status
-        <input type="radio" id="hadir" name="status" value="H" @if ($p->Status === "H") checked="checked" @endif>
+        <input class="form-conrol" type="radio" id="hadir" name="status" value="H" @if ($p->Status === "H") checked="checked" @endif>
         <label for="hadir">HADIR</label>
-        <input type="radio" id="tidak" name="status" value="T" @if ($p->Status === "T") checked="checked" @endif>
+        <input class="form-conrol" type="radio" id="tidak" name="status" value="T" @if ($p->Status === "T") checked="checked" @endif>
         <label for="tidak">TIDAK HADIR</label><br>
 
 		<input type="submit" class='btn btn-success' value="Simpan Data">

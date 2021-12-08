@@ -13,16 +13,14 @@
 
 	<table class="table table-success table-striped">
 		<tr>
-			<th>ID</th>
-			<th>ID Pegawai</th>
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
 		</tr>
 		@foreach($absen as $p)
 		<tr>
-			<td>{{ $p->ID }}</td>
-			<td>{{ $p->IDPegawai }}</td>
+			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->Tanggal }}</td>
 			<td>{{ $p->Status }}</td>
 			<td>
@@ -33,5 +31,6 @@
 		</tr>
 		@endforeach
 	</table>
+    {{ $absen->links() }}
 
 @endsection

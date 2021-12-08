@@ -14,7 +14,7 @@
 	<form action="/pendapatan/update" method="post">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->pendapatan_id }}"> <br/>
-		idpegawai <input type="number" required="required" name="idpegawai" value="{{ $p->pendapatan_idpegawai }}"> <br/>
+		Nama pegawai <input type="number" required="required" name="idpegawai" value="{{ $p->pendapatan_idpegawai }}"> <br/>
         bulan <input type="number" required="required" name="bulan" value="{{ $p->pendapatan_bulan }}"> <br/>
         tahun <input type="number" required="required" name="tahun" value="{{ $p->pendapatan_tahun }}"> <br/>
         gaji <input type="number" required="required" name="gaji" value="{{ $p->pendapatan_gaji }}"> <br/>
