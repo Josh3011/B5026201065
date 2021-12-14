@@ -4,7 +4,7 @@
 
 @section('isikonten')
 
-<h3> Edit Pegawai </h3>
+<h3> Detail Pegawai </h3>
 <a href="/pegawai" class="btn btn-primary"> Kembali</a>
 
 	<br/>

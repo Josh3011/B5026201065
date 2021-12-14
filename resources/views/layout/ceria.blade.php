@@ -27,22 +27,26 @@
         background-color: #e6e6e6;
         border-top: 2px solid black;
     }
+    .navbar{
+        background-color: #e0ebeb;
+        margin-top: 20px;
+        border-color: 3px solid black;
+    }
 </style>
 <body>
 <div class="header">
-    <center><img src="{{ asset('fotocsshtml/fotodiriku.jpg')}}" width="200px" height="250px">
+    <center><img src="{{ asset('fotocsshtml/fotodiriku.jpg')}}" width="200px" height="250px" class="rounded-circle">
             <h4> 5026201065/ Josha Adrista Harianto </h4>
     </center>
 
 </div>
-<div class="container container m-4">
-    <div class="col-sm-4">
+<div class="container">
+    <div class="navbar col-sm-4">
         <ul class="nav nav-pills nav-stacked">
           <li><a href="/pegawai">Daftar Pegawai</a></li>
           <li><a href="/absen">Menu Absen</a></li>
           <li><a href="/pendapatan">Data Pendapatan</a></li>
-          <li><a href="#">Minggu Depan</a></li>
-          <li><a href="#">Praktikum</a></li>
+          <li><a href="/bus">Praktikum3</a></li>
         </ul>
     </div>
     <div class="col-sm-8">
