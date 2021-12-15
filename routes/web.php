@@ -68,3 +68,8 @@ Route::get('/bus/hapus/{id}','BusController@hapus');
 Route::get('/bus/cari','BusController@cari');
 Route::get('/bus/detail/{id}','BusController@view');
 
+//route CRUD nilaikuliah
+Route::get('/nilaikuliah','NilaikuliahController@index');
+Route::get('/nilaikuliah/tambah','NilaikuliahController@tambah');
+Route::post('/nilaikuliah/store','NilaikuliahController@store');
+Route::get('/nilaikuliah/hapus/{id}','NilaikuliahController@hapus');

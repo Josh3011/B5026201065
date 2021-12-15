@@ -47,6 +47,7 @@
           <li><a href="/absen">Menu Absen</a></li>
           <li><a href="/pendapatan">Data Pendapatan</a></li>
           <li><a href="/bus">Praktikum3</a></li>
+          <li><a href="/nilaikuliah">UAS</a></li>
         </ul>
     </div>
     <div class="col-sm-8">
